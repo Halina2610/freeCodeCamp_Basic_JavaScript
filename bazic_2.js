@@ -18,18 +18,14 @@ function timesFive(num) {
 timesFive(5);
 timesFive(2);
 timesFive(0);
-
 // challenge 54
 // Declare the myGlobal variable below this line
 const myGlobal = 10;
-
 function fun1() {
   // Assign 5 to oopsGlobal here
 oopsGlobal = 5;
 }
-
 // Only change code above this line
-
 function fun2() {
   let output = "";
   if (typeof myGlobal != "undefined") {
