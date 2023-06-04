@@ -99,7 +99,23 @@ console.log(nextInLine(testArr, 6));
 console.log("After: " + JSON.stringify(testArr));
 
 // challenge 61
-// challenge 62
+function welcomeToBooleans() {
+  // Only change code below this line
+
+  return true; // Change this line //Измените welcomeToBooleansфункцию, чтобы она возвращала true вместо false
+  // Only change code above this line
+}
+
+// challenge 62 /*Создайте ifоператор внутри функции для возврата, Yes, that was trueесли параметр wasThatTrueесть true, и возврата No, that was falseв противном случае.*/
+function trueOrFalse(wasThatTrue) {
+  // Only change code below this line
+if (wasThatTrue) {
+   return "Yes, that was true";
+}
+return "No, that was false";
+  // Only change code above this line
+}
+
 // challenge 63
 // challenge 64
 // challenge 65
