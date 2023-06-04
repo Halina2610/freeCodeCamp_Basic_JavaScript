@@ -18,6 +18,7 @@ function timesFive(num) {
 timesFive(5);
 timesFive(2);
 timesFive(0);
+
 // challenge 54
 // Declare the myGlobal variable below this line
 const myGlobal = 10;
@@ -38,8 +39,57 @@ function fun2() {
 }
 
 // challenge 55
+function myLocalScope() {
+  // Only change code below this line
+const myVar = "litl"
+  console.log('inside myLocalScope', myVar);
+}
+myLocalScope();
+// Run and check the console
+// myVar is not defined outside of myLocalScope
+console.log('outside myLocalScope', myVar);
 // challenge 56
+// Setup
+const outerWear = "T-Shirt";
+function myOutfit() {
+  // Only change code below this line
+const outerWear = "sweater";
+  // Only change code above this line
+  return outerWear;
+}
+myOutfit();
+
 // challenge 57
-// challenge 58
+// Setup
+let sum = 0;
+function addThree() {
+  sum = sum + 3;
+}
+// Only change code below this line
+function  addFive() {
+   sum = sum + 5;
+}
+// Only change code above this line
+addThree();
+addFive();
+
+// challenge 58 - 50%
+// Setup
+let processed = 0;
+function processArg(num) {
+  return (num + 3) / 5;
+}
+// Only change code below this line
+processed = processArg(7);
+
 // challenge 59
-// challenge 60
+// challenge 61
+// challenge 62
+// challenge 63
+// challenge 64
+// challenge 65
+// challenge 66
+// challenge 67
+// challenge 68
+// challenge 69
+// challenge 70
