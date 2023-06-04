@@ -106,7 +106,10 @@ function welcomeToBooleans() {
   // Only change code above this line
 }
 
-// challenge 62 /*Создайте ifоператор внутри функции для возврата, Yes, that was trueесли параметр wasThatTrueесть true, и возврата No, that was falseв противном случае.*/
+// challenge 62 
+/*Создайте ifоператор внутри функции для возврата, Yes, 
+that was trueесли параметр wasThatTrueесть true, и 
+возврата No, that was falseв противном случае.*/
 function trueOrFalse(wasThatTrue) {
   // Only change code below this line
 if (wasThatTrue) {
@@ -117,9 +120,53 @@ return "No, that was false";
 }
 
 // challenge 63
+// Setup
+function testEqual(val) {
+  if (val == 12) { /* Добавьте в указанную строку оператор равенства (==), 
+  чтобы функция возвращала строку, Equalкогда valона эквивалентна 12. */
+    return "Equal";
+  }
+  return "Not Equal";
+}
+testEqual(10);
+
 // challenge 64
+// Setup
+function testStrict(val) {
+  if (val === 7) { // Строгое равенство ( ===) является аналогом оператора равенства ( ==). Однако, в отличие 
+    //от оператора равенства, который пытается 
+    //преобразовать оба сравниваемых значения в общий тип, оператор строгого равенства не выполняет преобразование типа.
+//Если сравниваемые значения имеют разные типы, они считаются неравными, и оператор строгого равенства вернет false. 
+    return "Equal";
+  }
+  return "Not Equal";
+}
+testStrict(10);
+
 // challenge 65
+// Setup
+function compareEquality(a, b) {
+  if (a === b) { // Функция compareEqualityв редакторе сравнивает два значения с 
+    //помощью оператора равенства. Измените функцию, чтобы она возвращала строку 
+    //Equalтолько тогда, когда значения строго равны.
+    return "Equal";
+  }
+  return "Not Equal";
+}
+compareEquality(10, "10");
+
 // challenge 66
+// Setup
+function testNotEqual(val) {
+  if (val != 99) { // Оператор неравенства ( !=) противоположен оператору равенства. Это означает не 
+    //равно и возвращает falseто, что вернулось бы к равенству, trueи наоборот . Как и оператор 
+    //равенства, оператор неравенства преобразует типы данных значений при сравнении. 
+    return "Not Equal";
+  }
+  return "Equal";
+}
+testNotEqual(10);
+
 // challenge 67
 // challenge 68
 // challenge 69
