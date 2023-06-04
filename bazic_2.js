@@ -83,6 +83,21 @@ function processArg(num) {
 processed = processArg(7);
 
 // challenge 59
+function nextInLine(arr, item) {
+  // Only change code below this line
+   arr.push(item); // Добавьте число в конец массива
+  const removed = arr.shift(); //удалите первый элемент массива
+  return removed;//вернуть элемент, который был удален
+  return item;
+  // Only change code above this line
+}
+// Setup
+let testArr = [1, 2, 3, 4, 5];
+// Display code
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
+
 // challenge 61
 // challenge 62
 // challenge 63
