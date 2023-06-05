@@ -194,15 +194,70 @@ function testGreaterOrEqual(val) {
 testGreaterOrEqual(10);
 
 // challenge 69
+//Сравнение с оператором меньше, чем
+function testLessThan(val) {
+  if (val < 25) {  // Change this line
+    return "Under 25";
+  }
+  if (val < 55) {  // Change this line
+    return "Under 55";
+  }
+  return "55 or Over";
+}
+testLessThan(10);
+
 // challenge 70
+//Cравнение с оператором меньше или равно
+function testLessOrEqual(val) {
+  if (val <= 12) {  // Change this line
+    return "Smaller Than or Equal to 12";
+  }
+  if (val <=24) {  // Change this line
+    return "Smaller Than or Equal to 24";
+  }
+  return "More Than 24";
+}
+testLessOrEqual(10);
+
 // challenge 71
+//Сравнения с логическим оператором И
+function testLogicalAnd(val) {
+  // Only change code below this line
+  if (val <= 50 && val >= 25) {
+      return "Yes";
+  }
+  // Only change code above this line
+  return "No";
+}
+testLogicalAnd(10);
+
 // challenge 72
+//Сравнения с логическим оператором Or
+function testLogicalOr(val) {
+  //Объедините два ifоператора в один оператор, который возвращает строку, Outsideесли valона не находится между 10и 20включительно.
+  // В противном случае вернуть строку Inside.
+  if (val < 10 || val > 20) {
+    return "Outside";
+  }
+  // Only change code above this line
+  return "Inside";
+}
+testLogicalOr(15);
+
 // challenge 73
+
 // challenge 74
+
 // challenge 75
+
 // challenge 76
+
 // challenge 77
+
 // challenge 78
+
 // challenge 79
+
 // challenge 80
+
 
