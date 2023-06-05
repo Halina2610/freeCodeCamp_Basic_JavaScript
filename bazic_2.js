@@ -168,6 +168,41 @@ function testNotEqual(val) {
 testNotEqual(10);
 
 // challenge 67
+//Сравнение с оператором больше, чем
+function testGreaterThan(val) {
+  if (val > 100) {  // Change this line
+    return "Over 100";
+  }
+  if (val > 10) {  // Change this line
+    return "Over 10";
+  }
+  return "10 or Under";
+}
+testGreaterThan(10);
+
 // challenge 68
+//Сравнение с оператором больше или равно
+function testGreaterOrEqual(val) {
+  if (val >= 20) {  // Change this line
+    return "20 or Over";
+  }
+  if (val >= 10) {  // Change this line
+    return "10 or Over";
+  }
+  return "Less than 10";
+}
+testGreaterOrEqual(10);
+
 // challenge 69
 // challenge 70
+// challenge 71
+// challenge 72
+// challenge 73
+// challenge 74
+// challenge 75
+// challenge 76
+// challenge 77
+// challenge 78
+// challenge 79
+// challenge 80
+
