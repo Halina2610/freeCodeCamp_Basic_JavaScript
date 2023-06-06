@@ -245,14 +245,104 @@ function testLogicalOr(val) {
 testLogicalOr(15);
 
 // challenge 73
+//Знакомство с операторами Else
+function testElse(val) {
+  let result = "";
+  // Only change code below this line
+  if (val > 5) {
+    result = "Bigger than 5";
+  }
+  else {
+    result = "5 or Smaller";
+  }
+  // Only change code above this line
+  return result;
+}
+testElse(4);
+
 
 // challenge 74
+//Знакомство с операторами Else If
+//Если у вас есть несколько условий, которые необходимо решить, вы можете связать ifоператоры вместе с else ifоператорами.
+
+function testElseIf(val) {
+  if (val > 10) {
+    return "Greater than 10";
+  }
+  else if (val < 5) {
+    return "Smaller than 5";
+  }
+else {
+  return "Between 5 and 10";}
+}
+testElseIf(7);
+//64%
 
 // challenge 75
+//Логический порядок в операторах If Else^
+//Функция выполняется сверху вниз
+//пример
+//Вот первое:
+function foo(x) {
+  if (x < 1) {
+    return "Less than one";
+  } else if (x < 2) {
+    return "Less than two";
+  } else {
+    return "Greater than or equal to two";
+  }
+}
+//второй:
+function bar(x) {
+  if (x < 2) {
+    return "Less than two";
+  } else if (x < 1) {
+    return "Less than one";
+  } else {
+    return "Greater than or equal to two";
+  }
+}
+//foo(0)вернет строку Less than oneи bar(0)вернет строку Less than two.
+
+//Функция выполняется сверху вниз, поэтому вам нужно быть осторожным с тем, какой оператор идет первым.
+//задание 
+function orderMyLogic(val) {
+  if (val < 5) {
+    return "Less than 5";
+  } else if (val < 10) {
+    return "Less than 10";
+  } else {
+    return "Greater than or equal to 10";
+  }
+}
+orderMyLogic(7);
 
 // challenge 76
+//Цепочка операторов If Else
+//if/elseоператоры могут быть объединены в цепочку для сложной логики
+function testSize(num) {
+  // Only change code below this line
+if (num < 5) {
+  return "Tiny";
+  } else if (num < 10) {
+    return "Small";
+  } else if (num < 15) {
+    return "Medium";
+  } else if (num < 20) {
+    return "Large";
+  } else if (num >= 20) {
+    return "Huge";
+  }
+  return "Change Me";
+  // Only change code above this line
+}
+testSize(7);
+
 
 // challenge 77
+//Гольф-код
+//В игре в гольф у каждой лунки есть par, что означает среднее количество очков, которое strokesигрок в гольф должен сделать, чтобы загнать мяч в лунку и завершить игру. В зависимости от того, насколько выше или ниже parвы strokesнаходитесь, существует другое прозвище.
+//Вашей функции будут переданы parи strokes аргументы. Верните правильную строку в соответствии с этой таблицей, в которой штрихи перечислены в порядке приоритета; сверху (самый высокий) к низу (самый низкий):
 
 // challenge 78
 
