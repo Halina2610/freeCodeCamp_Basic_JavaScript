@@ -538,6 +538,61 @@ if (a < 0 || b < 0) {
 abTest(2,2);
 
 // challenge 84
+//Подсчет карт
+let count = 0;
+
+function cc(card) {
+  // Only change code below this line
+  /*Вы напишете функцию подсчета карт. Он получит cardпараметр, который может быть числом или строкой,
+  и увеличит или уменьшит глобальную countпеременную в соответствии со значением карты (см. таблицу). 
+  Затем функция вернет строку с текущим счетчиком и строку Bet, если счетчик положительный или Holdнулевой 
+  или отрицательный. Текущий счет и решение игрока ( Betили Hold) должны быть разделены одним пробелом.*/
+ switch (card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++; //число равно сard +1
+      break;
+    case 10:
+    case "J":
+    case "Q":
+    case "K":
+    case "A":
+      count--;  //число равно сard -1
+      break;
+  }
+  if (count > 0) { // Ксли число больше нуля 
+    return count + " Bet"; //возврачает число +1
+  } else {
+    return count + " Hold";
+  }
+  return "Change Me";
+  /* Проверьте значение каждой карты с помощью switchзаявления.
+Количество переменных :
+Увеличивается на 1, если это карта 2, 3, 4, 5 или 6.
+Поскольку 7, 8 и 9 ничего не стоят, мы игнорируем эти карты в нашем switchутверждении.
+Уменьшается на 1, если это карта 10, «J», «Q», «K» или «A».
+Проверьте значение count и верните соответствующий ответ.*/
+}
+cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+// Или следующее решение
+let count = 0;
+function cc(card) {
+  // Only change code below this line
+  var regex = /[JQKA]/;
+  if (card > 1 && card < 7) {
+    count++;
+  } else if (card === 10 || regex.test(card)) {
+    count--;
+  }
+  if (count > 0) return count + " Bet";
+  return count + " Hold";
+  // Only change code above this line
+}
+
 // challenge 85
 // challenge 86
 // challenge 87
