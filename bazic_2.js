@@ -343,11 +343,63 @@ testSize(7);
 //Гольф-код
 //В игре в гольф у каждой лунки есть par, что означает среднее количество очков, которое strokesигрок в гольф должен сделать, чтобы загнать мяч в лунку и завершить игру. В зависимости от того, насколько выше или ниже parвы strokesнаходитесь, существует другое прозвище.
 //Вашей функции будут переданы parи strokes аргументы. Верните правильную строку в соответствии с этой таблицей, в которой штрихи перечислены в порядке приоритета; сверху (самый высокий) к низу (самый низкий):
+const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+
+function golfScore(par, strokes) {
+  // Only change code below this line
+if (strokes == 1) {
+  return "Hole-in-one!";
+} else if (strokes <= par - 2) {
+  return "Eagle";
+} else if (strokes === par - 1) {
+  return "Birdie";
+} else if (strokes === par) {
+  return "Par";
+} else if (strokes === par + 1){
+  return "Bogey";
+} else if (strokes === par + 2) {
+  return "Double Bogey";
+} else if (strokes >= par + 3) {
+  return "Go Home!";
+}
+  return "Change Me";
+  // Only change code above this line
+}
+golfScore(5, 4);
 
 // challenge 78
+//Выбор из множества вариантов с операторами Switch 
+/*Если вам нужно сопоставить одно значение со многими параметрами, вы можете использовать оператор switch . 
+Оператор switchсравнивает значение с операторами case , которые определяют различные возможные значения. 
+Любые действительные операторы JavaScript могут выполняться внутри блока case и будут выполняться с первого 
+совпадающего caseзначения до тех пор, пока breakне встретится a.*/
 
 // challenge 79
 
 // challenge 80
+// challenge 81
+// challenge 82
+// challenge 83
+// challenge 84
+// challenge 85
+// challenge 86
+// challenge 87
+// challenge 88
+// challenge 89
+// challenge 90
+// challenge 91
+// challenge 92
+// challenge 93
+// challenge 94
+// challenge 95
+// challenge 96
+// challenge 97
+// challenge 98
+// challenge 99
+// challenge 100
+// challenge 101
+
+
+
 
 
