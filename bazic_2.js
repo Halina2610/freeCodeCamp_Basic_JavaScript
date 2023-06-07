@@ -341,9 +341,11 @@ testSize(7);
 
 // challenge 77
 //Гольф-код
-//В игре в гольф у каждой лунки есть par, что означает среднее количество очков, которое strokesигрок в гольф должен сделать, чтобы загнать мяч в лунку и завершить игру. 
+//В игре в гольф у каждой лунки есть par, что означает среднее количество очков, 
+//которое strokesигрок в гольф должен сделать, чтобы загнать мяч в лунку и завершить игру. 
 //В зависимости от того, насколько выше или ниже parвы strokesнаходитесь, существует другое прозвище.
-//Вашей функции будут переданы parи strokes аргументы. Верните правильную строку в соответствии с этой таблицей, в которой штрихи перечислены в порядке приоритета; сверху (самый высокий) к низу (самый низкий):
+//Вашей функции будут переданы parи strokes аргументы. Верните правильную строку в соответствии с этой 
+//таблицей, в которой штрихи перечислены в порядке приоритета; сверху (самый высокий) к низу (самый низкий):
 const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
 
 function golfScore(par, strokes) {
@@ -608,12 +610,125 @@ friends: ["boy", "men", "ded"]
   // Only change code above this line
 };
 // challenge 86
+//Доступ к свойствам объекта с помощью записи через точку
+/*Существует два способа доступа к свойствам объекта: запись через точку ( .) и запись в квадратных скобках ( []), аналогичная массиву.
+Точечная нотация — это то, что вы используете, когда заранее знаете имя свойства, к которому пытаетесь получить доступ.*/
+// Setup
+/*Считайте значения свойств testObjс помощью записи через точку. 
+Установите переменную hatValueравной свойству объекта hatи установите переменную shirtValueравной свойству объекта shirt.*/
+const testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+// Only change code below this line
+const hatValue = testObj.hat;      // Change this line
+const shirtValue = testObj.shirt;    // Change this line
+
 // challenge 87
+//Доступ к свойствам объекта с помощью нотации скобок
+/*Второй способ доступа к свойствам объекта — запись в квадратных скобках ( []). 
+Если в имени свойства объекта, к которому вы пытаетесь получить доступ, есть пробел, 
+вам нужно будет использовать обозначение в квадратных скобках.
+Однако вы по-прежнему можете использовать скобки для свойств объекта без пробелов.*/
+/*Прочитайте значения свойств an entreeи the drinkиспользования testObj
+скобочной нотации и присвойте их соответственно entreeValueи drinkValue.*/
+// Setup
+const testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+// Only change code below this line
+const entreeValue = testObj["an entree"];   // Change this line
+const drinkValue = testObj["the drink"];    // Change this line
+75%
+  
 // challenge 88
+  //Доступ к свойствам объекта с помощью переменных
+  /*Еще одно использование квадратных скобок для объектов — доступ к свойству, 
+  которое хранится как значение переменной. Это может быть очень полезно для перебора
+  свойств объекта или при доступе к таблице поиска.*/
+  /*Установите playerNumberпеременную в 16. Затем используйте переменную, 
+  чтобы найти имя игрока и присвоить его player.*/
+  // Setup
+const testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+// Only change code below this line
+const playerNumber = 16;  // Change this line
+const player = testObj[playerNumber];   // Change this line
+  
 // challenge 89
+//Обновление свойств объекта
+//После того, как вы создали объект JavaScript, вы можете обновить его свойства в любое время так же, как и любую другую переменную.
+//Для обновления можно использовать либо точку, либо скобки.
+// Setup
+const myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+myDog.name = "Happy Coder";// изменяет имя
+// Only change code below this line
+
 // challenge 90
+//Добавление новых свойств к объекту JavaScript
+/*Вы можете добавлять новые свойства к существующим объектам JavaScript так же, как вы их изменяете.
+ourDog.bark = "bow-wow";
+или
+
+ourDog["bark"] = "bow-wow";
+Теперь, когда мы оценим ourDog.bark, мы получим его лай bow-wow.*/
+const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+myDog.bark = 'woof';//Добавьте barkсвойство myDogи задайте для него звук собаки, например "woof". 
+
 // challenge 91
+//Удалить свойства из объекта JavaScript
+//свойствo  delete
+// Setup
+const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+delete myDog.tails;
+
 // challenge 92
+//Использование объектов для поиска
+/*Объекты можно рассматривать как хранилище ключей/значений, например словарь. 
+Если у вас есть табличные данные, вы можете использовать объект для поиска значений, 
+а не switchоператор или if/elseцепочку. Это наиболее полезно, когда вы знаете, что 
+ваши входные данные ограничены определенным диапазоном.*/
+//пример
+const article = {
+  "title": "How to create objects in JavaScript",
+  "link": "https://www.freecodecamp.org/news/a-complete-guide-to-creating-objects-in-javascript-b0e2450655e8/",
+  "author": "Kaashan Hussain",
+  "language": "JavaScript",
+  "tags": "TECHNOLOGY",
+  "createdAt": "NOVEMBER 28, 2018"
+};
+const articleAuthor = article["author"];
+const articleLink = article["link"];
+
+/*articleAuthorэто строка Kaashan Hussain, articleLinkэто строка
+https://www.freecodecamp.org/news/a-complete-guide-to-creating-objects-in-javascript-b0e2450655e8/
+и valueLookupэто строка How to create objects in JavaScript.*/
+
+//Преобразуйте оператор switch в объект с именем lookup. Используйте его, чтобы найти valи присвоить связанную строку переменной result.
+
+
 // challenge 93
 // challenge 94
 // challenge 95
@@ -623,6 +738,10 @@ friends: ["boy", "men", "ded"]
 // challenge 99
 // challenge 100
 // challenge 101
+// challenge 102
+// challenge 103
+// challenge 104
+// challenge 105
 
 
 
