@@ -594,6 +594,19 @@ function cc(card) {
 }
 
 // challenge 85
+//Создание объектов JavaScript
+/* Объекты аналогичны arrays, за исключением того, что вместо использования индексов для доступа и изменения 
+их данных вы получаете доступ к данным в объектах через то, что называется properties.
+Объекты полезны для структурированного хранения данных и могут представлять объекты реального мира.*/
+const myDog = {
+  // Only change code below this line
+name: "Harry", // Объекты
+legs: 4,
+tails: 1,
+friends: ["boy", "men", "ded"]
+
+  // Only change code above this line
+};
 // challenge 86
 // challenge 87
 // challenge 88
