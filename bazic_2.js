@@ -727,11 +727,113 @@ https://www.freecodecamp.org/news/a-complete-guide-to-creating-objects-in-javasc
 и valueLookupэто строка How to create objects in JavaScript.*/
 
 //Преобразуйте оператор switch в объект с именем lookup. Используйте его, чтобы найти valи присвоить связанную строку переменной result.
-
+// Setup
+function phoneticLookup(val) {
+  let result = "";
+  // Only change code below this line
+  var lookup = { //Преобразуйте оператор switch в объект с именем lookup
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank"
+  };
+    result = lookup[val];
+  // Only change code above this line
+  return result;
+}
+phoneticLookup("charlie");
 
 // challenge 93
+/*Проверка объектов на свойства
+Чтобы проверить, существует ли свойство данного объекта или нет, 
+вы можете использовать .hasOwnProperty()метод. someObject.hasOwnProperty(someProperty)возвращает trueили falseв зависимости от того, 
+найдено свойство в объекте или нет.
+
+Пример
+
+function checkForProperty(object, property) {
+  return object.hasOwnProperty(property);
+}
+
+checkForProperty({ top: 'hat', bottom: 'pants' }, 'top'); // true
+checkForProperty({ top: 'hat', bottom: 'pants' }, 'middle'); // false
+Первый checkForPropertyвызов функции возвращает значение true, а второй возвращает значение false.*/
+/*Измените функцию checkObj, чтобы проверить, содержит ли объект, переданный в параметр функции, objопределенное свойство, 
+переданное в параметр функции checkProp. 
+Если переданное свойство checkPropнайдено в obj, верните значение этого свойства. Если нет, верните Not Found.*/
+function checkObj(obj, checkProp) {
+  // Only change code below this line
+   if (obj.hasOwnProperty(checkProp)) { //пусть обьект содержит (checkProp)
+    return obj[checkProp];             // вернется
+  } else {
+    return "Not Found";                 //если не найдено
+  }
+  // Only change code above this line
+}
+
 // challenge 94
+/*правление сложными объектами
+Иногда вам может понадобиться хранить данные в гибкой структуре данных . Объект JavaScript — это один из способов 
+обработки гибких данных. Они допускают произвольные комбинации строк , чисел , логических значений , массивов , функций и объектов .
+Вот пример сложной структуры данных:
+const ourMusic = [
+  {
+    "artist": "Daft Punk",
+    "title": "Homework",
+    "release_year": 1997,
+    "formats": [ 
+      "CD", 
+      "Cassette", 
+      "LP"
+    ],
+    "gold": true
+  }
+];
+Это массив, который содержит один объект внутри. Объект содержит различные фрагменты метаданных об альбоме. 
+Он также имеет вложенный formatsмассив. Если вы хотите добавить больше записей альбомов, вы можете сделать это, 
+добавив записи в массив верхнего уровня. Объекты содержат данные в свойстве, имеющем формат ключ-значение. 
+В приведенном выше примере "artist": "Daft Punk"это свойство имеет ключ artistи значение Daft Punk.*/'
+const myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  },
+ {
+    artist: "Thirty second to mars",
+    title: "A Beautiful Lie ",
+    release_year: 2005,
+    formats: ["CD", "DVD", "LP"]
+  }
+];
+
 // challenge 95
+//Доступ к вложенным объектам
+//Доступ к подсвойствам объектов можно получить, соединив вместе точки или квадратные скобки. 
+/*Получите доступ к myStorageобъекту и назначьте содержимое свойства glove boxпеременной gloveBoxContents. 
+По возможности используйте запись через точку для всех свойств, в противном случае используйте запись в квадратных скобках.*/
+const myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+const gloveBoxContents = myStorage.car.inside["glove box"];
+
 // challenge 96
 // challenge 97
 // challenge 98
