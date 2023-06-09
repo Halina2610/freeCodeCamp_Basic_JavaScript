@@ -911,21 +911,93 @@ function updateRecords(records, id, prop, value) {
       records[id][prop] = [];
     } //обновление
     records[id][prop].push(value); //добавляет 
-  }
-  
+  } 
   return records; //возврат
-
-
 updateRecords(recordCollection, 5439, 'artist', 'ABBA');
 
 // challenge 98
+  /*Коллекция записей
+Вы создаете функцию, которая помогает поддерживать коллекцию музыкальных альбомов. 
+Коллекция организована как объект, содержащий несколько альбомов, которые также являются объектами. 
+Каждый альбом представлен в коллекции уникальным idименем свойства. В каждом объекте альбома есть различные свойства, 
+описывающие информацию об альбоме. Не все альбомы имеют полную информацию.
+
+Функция updateRecordsпринимает 4 аргумента, представленных следующими параметрами функции:
+
+records- объект, содержащий несколько отдельных альбомов
+id- число, представляющее конкретный альбом в recordsобъекте
+prop- строка, представляющая имя свойства альбома для обновления
+value- строка, содержащая информацию, используемую для обновления свойства альбома
+Завершите функцию, используя приведенные ниже правила, чтобы изменить объект, переданный функции.
+
+Ваша функция всегда должна возвращать весь recordsобъект.
+Если valueэто пустая строка, удалите данное propсвойство из альбома.
+Если propнет tracksи valueне является пустой строкой, назначьте valueэтому альбому prop.
+Если propесть tracksи valueне является пустой строкой, вам необходимо обновить массив альбома tracks.
+Во-первых, если у альбома нет tracksсвойства, назначьте ему пустой массив. Затем добавьте valueпоследний элемент в массив альбома tracks.
+Примечание.recordCollection Для тестов используется копия объекта . Вы не должны напрямую изменять recordCollectionобъект.*/
+  // Setup
+const recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+};
+// Only change code below this line
+function updateRecords(records, id, prop, value) {
+  if (value === "") { //если значение пустое
+    delete records[id][prop]; // удаляется строка
+  } else if (prop !== "tracks" && value !== "") { //если нет и value не является пустой строкой,
+    records[id][prop] = value;           //то устанавливает значение valueэтому альбому 
+  } else if (prop === "tracks" && value !== "") { 
+    if (records[id].hasOwnProperty("tracks") === false) {
+      records[id][prop] = [];
+    } //обновление
+    records[id][prop].push(value); //добавляет 
+  }
+  return records;
+}
+updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+  
 // challenge 99
-// challenge 100
-// challenge 101
-// challenge 102
-// challenge 103
-// challenge 104
-// challenge 105
+  //Итерация с циклами while JavaScript
+  /*Вы можете запускать один и тот же код несколько раз, используя цикл.
+Первый тип цикла, который мы изучим, называется циклом, whileпотому что он выполняется, пока заданное условие истинно, 
+и останавливается, когда это условие перестает быть истинным.
+const ourArray = [];
+let i = 0;
+while (i < 5) {
+  ourArray.push(i);
+  i++;
+}
+В приведенном выше примере кода whileцикл выполнится 5 раз и добавит числа от 0 до 4 к ourArray.
+Давайте попробуем заставить цикл while работать, помещая значения в массив.
+Добавьте числа от 5 до 0 (включительно) в порядке убывания, чтобы myArrayиспользовать whileцикл.*/
+  // Setup
+const myArray = [];
+
+// Only change code below this line
+let i = 5;
+
+while (i >= 0) {
+  myArray.push(i);
+  i--;
+}
+  
+
 
 
 
