@@ -172,7 +172,14 @@ do {
 хотя бы один раз. Давайте попробуем заставить do...whileцикл работать, помещая значения в массив.
 Измените whileцикл в коде на do...whileцикл, чтобы цикл подталкивал только число 10к myArray, и
 iон будет равен тому, 11когда ваш код завершит работу.*/
-
+// Setup
+const myArray = [];
+let i = 10;
+// Only change code below this line
+ do {
+  myArray.push(i);
+  i++;
+} while (i < 10)
 
 // challenge 106
 // challenge 107
