@@ -209,6 +209,18 @@ let i = 10;
 Примечание. У рекурсивных функций должен быть базовый случай, когда они возвращаются без повторного вызова функции 
 (в этом примере, когда n <= 0), иначе они никогда не смогут завершить выполнение.
 /*
+//Напишите рекурсивную функцию, sum(arr, n)которая возвращает сумму первых nэлементов массива arr.
+
+function sum(arr, n) {
+  // Only change code below this line
+  if (n <= 0) {
+     return 0;
+    } else {
+      return sum(arr, n - 1) + arr[n - 1];
+    }
+  // Only change code above this line
+}
+
 // challenge 107
 // challenge 108
 // challenge 109
