@@ -221,7 +221,59 @@ function sum(arr, n) {
   // Only change code above this line
 }
 
-// challenge 107
+// challenge 
+/*Поиск профиля
+У нас есть массив объектов, представляющих разных людей в наших списках контактов.
+Функция lookUpProfile, которая принимает nameи свойство ( prop) в качестве аргументов, была предварительно написана для вас.
+Функция должна проверять, nameявляется ли контакт реальным firstNameи данное свойство ( prop) является свойством этого контакта.
+Если оба верны, верните «значение» этого свойства.
+Если nameне соответствует ни одному контакту, то вернуть строку No such contact.
+Если propне соответствует ни одному допустимому свойству контакта, найденному совпадающим, nameверните строку No such property.
+*/
+// Setup
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+function lookUpProfile(name, prop) {
+  // Only change code below this line
+  for (let x = 0; x < contacts.length; x++) { //при запуске цикла  проверяется значение имени
+    if (contacts[x].firstName === name) {
+      if (contacts[x].hasOwnProperty(prop)) { //здесь если имя соответствует критериям идет возврат значения имени
+        return contacts[x][prop];
+      } else {                       // если нет значения имени, то идет возврат "No such property"
+        return "No such property"; // цикл преходит на следующее значение
+      }
+    }
+  }
+  return "No such contact";      //при нессоответствии возвращается  "No such contact"
+  // Only change code above this line
+}
+
+lookUpProfile("Akira", "likes");
+ 
 // challenge 108
 // challenge 109
 // challenge 110
